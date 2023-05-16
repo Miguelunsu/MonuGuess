@@ -1,0 +1,357 @@
+body {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, p {
+    font-family: Helvetica;
+    color: white;
+}
+
+h1, h2{
+  width: fit-content;
+  display:inline-block;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+h1{
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7,minmax(0,1fr));
+}
+
+.grid {
+  display: grid;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235/var(--tw-bg-opacity));
+}
+
+.green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 200 50/var(--tw-bg-opacity));
+}
+
+.rounded {
+  display: flex;
+  border-radius: .25rem;
+  font-family: Arial;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.justify-content-left{
+  justify-content: left;
+  padding-left: 0.2em;
+}
+
+.h-8 {
+  height: 2em;
+}
+.col-span-7 {
+  grid-column: span 7/span 7;
+}
+
+.col-span-3 {
+  grid-column: span 3/span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4/span 4;
+}
+
+.col-span-2 {
+  grid-column: span 2/span 2;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.flex {
+  display: flex;
+}
+
+#guess_input::placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: #999;
+}
+
+#guess_input {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+
+  height: 2.5em;
+  border: 2px solid #ced4da;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.1rem;
+  padding: 1px;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 0.2em;
+}
+
+#LandmarkList {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#LandmarkList option {
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+#LandmarkList option:last-child {
+  border-bottom: none;
+}
+
+.container{
+  max-width: 35em;
+  width: 95%;
+  height: auto;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container img {
+  max-width: 90%;
+  height: auto;
+  max-height: 32em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.container #SubmitButton {
+  background-color: rgb(71, 48, 206);
+  color: white;
+  padding: 0.5em 0.5em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: center!important;
+}
+
+.container #SubmitButton:hover {
+  background-color: rgb(110, 210, 210);
+}
+
+header{
+  border-bottom-color: rgb(255, 255, 255);
+  width: 90%;
+  display: block;
+  display: flex;
+  margin: auto;
+}
+
+.container h2{
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+}
+
+.container .Instructions_Image_Container img{
+  height: 350px;
+}
+
+#instructions-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.container .regular_button {
+  background-color: rgb(71, 48, 206);
+  color: white;
+  padding: 0em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.container .button_container {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.1em;
+}
+
+.container #Show_Hide_Guess_Button {
+  background-color: rgb(71, 48, 206);
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.container .margin-auto-left{
+  margin-left: auto;
+}
+
+.container .margin-auto-right{
+  margin-right: auto;
+}
+
+
+.container h3{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container h4{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Show_Hide_Guess_Button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#guessesContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#Final_Showcase{
+  display: none;
+}
+
+#Final_Showcase #Description p {
+  text-align: justify;
+}
+
+#guessesContainer p{
+  text-align: center;
+}
+
+#Final_Showcase #squares {
+  text-align: center;
+}
+
+#Whole_Thing_guesses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#guessesContainer {
+  text-align: center;
+}
+
+#div_guess_button {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center horizontally */
+  clear: both;
+}
+
+#guessesContainer p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+#container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.green-text {
+  color: green;
+}
+
+.answer-rows {
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  color: black;
+  line-height: 8px; /* set line-height to match the height */
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+
+  .container{
+    max-width: 100em!important
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container{
+    max-width: 100em!important
+  }
+}
