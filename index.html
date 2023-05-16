@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <title>MonuGuess</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body style="background-color:rgb(22, 17, 63)">
+    
+    <!-- MAIN -->
+    <div class="container"  id="container-index">
+        <!-- TITULO -->
+        <header>
+            <div class = 'button_container'>
+                <button id="show-instructions-button" class="regular_button" style="background-image: url('./resources/icons/help_FILL0_wght400_GRAD0_opsz48.svg'); background-size: contain;"></button>
+            </div>
+            <!-- <div class = 'button_container'>
+            </div> -->
+            <h1 class="Title">
+                MonuGuess
+            </h1>
+            <!-- <div class = 'button_container'>
+                <button id="show-calendar-button" class="regular_button" style="background-image: url('./resources/icons/calendar_today_FILL0_wght400_GRAD0_opsz48.svg'); background-size: contain;"></button>
+            </div> -->
+            <div class = 'button_container'>
+                <button id="show-stats-button" class="regular_button" style="background-image: url('./resources/icons/equalizer_FILL0_wght400_GRAD0_opsz48.svg'); background-size: contain;"></button>
+            </div>
+        </header>
+        <hr>
+
+        <br>
+        <!-- IMAGEN -->
+        <img src="./resources/PixelCode/Black.png" id = "PixelImage" >
+
+        <!-- BOXES -->
+        <!-- INPUT BOX AND BUTTON -->
+        <div id="input_and_button">
+            <input id ="guess_input" type="text" onfocus="this.value=''" list="LandmarkList" placeholder="Type the landmark...">
+            <datalist id="LandmarkList">
+            </datalist>
+            
+            <button id="SubmitButton" type="submit">Guess!</button>
+        </div>
+
+        <!-- EXTRA LOGS -->
+        <script>
+            console.log('Iniciado.');
+        </script>
+
+        <!-- TABLE -->
+        <div id='boxes_guess' class='grid grid-cols-7 gap-1 text-center'>
+            <div class = 'col-span-7 h-8 bg-gray-200 dark:bg-slate-600 rounded' id=GuessRow_1></div>
+            <div class = 'col-span-7 h-8 bg-gray-200 dark:bg-slate-600 rounded' id=GuessRow_2></div>
+            <div class = 'col-span-7 h-8 bg-gray-200 dark:bg-slate-600 rounded' id=GuessRow_3></div>
+            <div class = 'col-span-7 h-8 bg-gray-200 dark:bg-slate-600 rounded' id=GuessRow_4></div>
+            <div class = 'col-span-7 h-8 bg-gray-200 dark:bg-slate-600 rounded' id=GuessRow_5></div>
+        </div>
+
+        <br>
+        
+        <div id="Final_Showcase">
+            <h3>
+                <span id="Correct_Answer_Display_Exclamation"> Okay! </span>
+            </h3>
+            <br>
+            <div id="squares">---</div>
+            <br>
+            <h4>
+                The answer was: 
+            </h4>
+            <br>
+            <h3>
+                <span id="Correct_Answer_Display"> - </span>
+            </h3>
+            <div id="Description">
+                <p>
+                    - description -
+                </p>
+            </div>
+            <hr>
+        </div>
+
+        <div id="div_guess_button">
+            <button id='Show_Hide_Guess_Button'>Show Guesses</button>
+        </div>
+
+        <div id='guessesContainer'>
+        </div>
+    </div>
+	
+    <!-- INSTRUCTIONS -->
+    <div class="container" id="container-instructions" style="display:none;">
+        <!-- TITULO -->
+        <header>
+            <div class = 'button_container'>
+                <button id="show-index-button" class="regular_button" style="background-image: url('./resources/icons/close_FILL0_wght400_GRAD0_opsz48.svg'); background-size: contain;"></button>
+            </div>
+            <h1 class="Title">
+                How to play
+            </h1>
+            <div class = 'button_container'>
+            </div>
+        </header>
+        <hr>
+
+        <p>
+            Guess the Landmark in 5 guesses. This can be any monumental or natural landmark all over the world.<br>
+            <br>
+            Each guess must be a valid landmark within the list.<br>
+            <br>
+            After each guess, you will see if the country and continent of the landmark are correct.
+        </p>
+
+        <hr>
+        <h3>
+            Example
+        </h3>
+
+        <p>
+            The first image will look like this:
+        </p>
+        <!-- IMAGEN -->
+        <div class='Instructions_Image_Container'>
+            <img src="./resources/PixelCode/ID-1-Pixel10.png" id = "PixelImage" alt="My Image" height="100">
+        </div>
+
+        <p>
+            Your first guess "Big Ben (UK)" turns out to be wrong, but you will have information about the country and contienent of the landmark. Also, the picture of the landmark will become more clear.
+        </p>
+
+        <div class="grid grid-cols-7 gap-1 text-center">
+            <div class="col-span-3 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Landmark_Row1">Big Ben (UK)</div>
+            <div class="col-span-2 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Country_Row1">United Kingdom &#10060</div>
+            <div class="col-span-2 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Continent_Row1">Europe &#x2705</div>
+        </div>
+
+        <br>
+        <!-- IMAGEN -->
+        <div class='Instructions_Image_Container'>
+            <img src="./resources/PixelCode/ID-1-Pixel20.png" id = "PixelImage" alt="My Image" height="100">
+        </div>
+
+        <p>
+            Your second guess "Eiffel Tower (France)" is correct, congratulations!
+        </p>
+
+        <div class="grid grid-cols-7 gap-1 text-center">
+            <div class="col-span-3 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Landmark_Row1">Eiffel Tower (France)</div>
+            <div class="col-span-2 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Country_Row1">France &#x2705</div>
+            <div class="col-span-2 h-8 bg-gray-200 dark:bg-slate-600 rounded id=Continent_Row1">Europe &#x2705</div>
+        </div>
+
+        <hr>
+        
+    </div>
+
+    <!-- STATS -->
+    <div class="container" id="container-stats" style="display:none;">
+        <!-- TITULO -->
+        <header>
+            <div class = 'button_container'>
+                <button id="show-index-button2" class="regular_button" style="background-image: url('./resources/icons/close_FILL0_wght400_GRAD0_opsz48.svg'); background-size: contain;"></button>
+            </div>
+            <h1 class="Title">
+                Statistics
+            </h1>
+            <div class = 'button_container'>
+            </div>
+        </header>
+        <hr>
+        <h3>
+            Played: <span id=n_win></span>
+        </h3>
+        <h3>
+            Win percentage: <span id=per_win></span>%
+        </h3>
+        <h3>
+            Max streak: <span id=max_streak></span>
+        </h3>
+        <h3>
+            Current streak: <span id=current_streak></span>
+        </h3>
+        <hr>
+        <script>
+            var n_1 = 2;
+            var n_2 = 5;
+            var n_3 = 10;
+            var n_4 = 12;
+            var n_5 = 5;
+            var n_x = 15;
+            
+            max_streak = 10
+            current_streak = 10
+
+            var n_win = n_1+n_2+n_3+n_4+n_5
+            var n_played = n_win+n_x
+            var per_win =  (n_win / n_played * 100).toFixed(1)
+
+            document.getElementById("n_win").innerHTML = n_win;
+            document.getElementById("per_win").innerHTML = per_win;
+            
+            document.getElementById("max_streak").innerHTML = max_streak;
+            document.getElementById("current_streak").innerHTML = current_streak;
+
+            if (max_streak == current_streak) {
+                console.log('Changin green color')
+                document.getElementById("max_streak").style.color = "greenyellow";
+                document.getElementById("current_streak").style.color = "greenyellow";
+		    }
+        </script>
+
+        <h3>
+            Guess distribution:
+        </h3>
+        <canvas id="myChart"></canvas>
+        <script>
+
+          var data = {
+            labels: ['1', '2', '3', '4', '5', 'x'],
+            datasets: [{
+              data: [n_1, n_2, n_3, n_4, n_5, n_x],
+              backgroundColor: 'rgb(110, 210, 210)'
+            }]
+          };
+      
+          var options = {
+            legend: {
+              display: false
+            },
+            scales: {
+              xAxes: [{
+                ticks: {
+                  fontSize: 14,
+                  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                  beginAtZero: true
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  fontSize: 14,
+                  fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                  beginAtZero: true
+                }
+              }]
+            }
+          };
+      
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: data,
+            options: options
+          });
+        </script>
+    </div>
+
+    <script src="./resources/js/Landmark.js"></script>
+    <script src="./resources/js/descriptions.js"></script>
+    <script src="./resources/js/Land-desc-mana.js"></script>
+    <script src="./resources/js/index.js"></script>
+    <script src="./resources/js/instructions_js.js"></script>
+</body>
+</html>
