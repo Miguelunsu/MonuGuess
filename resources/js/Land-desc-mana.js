@@ -28,7 +28,7 @@ const startDate = new Date(2023, 4, 15); // The month in the middle needs to be 
 console.log('Start day: startDate');
 console.log(startDate);
 const dictionary = {};
-for (let i = 0; i < 14; i++) {
+for (let i = 0; i < 17; i++) {
 	const date = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + i);
 	const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
 	const value = landmark_list[i % landmark_list.length];
