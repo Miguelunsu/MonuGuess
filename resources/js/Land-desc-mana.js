@@ -20,7 +20,7 @@ console.log('Current day: formattedToday');
 console.log(formattedToday);
 
 // Creating list of landmarks
-const landmark_list = [64, 33, 41, 57, 70, 140, 171, 82, 16, 173, 95, 67, 132, 33,33,33,33]
+const landmark_list = [64, 33, 41, 57, 70, 140, 171, 82, 16, 173, 95, 67, 132, 95,95,95,95,95]
 
 // Creating diccionary day-landmark
 const dates = [];
