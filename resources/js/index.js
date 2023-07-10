@@ -313,6 +313,8 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_text = "🟩⬛⬛⬛⬛"
+	console.log('Squares_text:')
+	console.log(Squares_text)
         Squares_const.innerHTML = `&#129001; &#11035; &#11035; &#11035; &#11035;`
 
         // Call the function to generate the button (for the whatsap)
