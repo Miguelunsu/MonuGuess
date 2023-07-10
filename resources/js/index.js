@@ -313,6 +313,10 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_const.innerHTML = `&#129001; &#11035; &#11035; &#11035; &#11035;`
+
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+	
       } else if (flag == 1){
         // Segunda box
 
@@ -331,6 +335,10 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_const.innerHTML = `&#128997; &#129001; &#11035; &#11035; &#11035;`
+
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+	
       } else if (flag == 2){
         // Tercera box
 
@@ -349,6 +357,10 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_const.innerHTML = `&#128997; &#128997; &#129001; &#11035; &#11035;`
+
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+	
       } else if (flag == 3){
         // Cuarta box
 
@@ -367,6 +379,10 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#129001; &#11035;`
+
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+	
       } else if (flag == 4){
         // Quinta box
 
@@ -385,6 +401,10 @@ button.addEventListener('click', function(){
 
         // Creating the squares
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#129001;`
+
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+	
       }
 
       // Update the flag to switch to the other image source
@@ -493,6 +513,9 @@ button.addEventListener('click', function(){
         // Creating the squares
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#128997;`
 
+        // Call the function to generate the button (for the whatsap)
+        generateButton();
+
         // Removing the input and guess button:
         input_and_button_Element.remove();
 		
@@ -514,3 +537,54 @@ button.addEventListener('click', function(){
   }
 
 });
+
+// Generate button for the button
+function generateButton() {
+  var button_wha = document.createElement("button");
+  button_wha.textContent = "Share (WhatsApp)";
+  button_wha.onclick = shareViaWhatsApp;
+
+  // Append the button to a specific HTML element or container
+  var container = document.getElementById("Whatsap_Button_Id");
+  container.appendChild(button_wha);
+
+  var button_copy = document.createElement("button");
+  button_copy.textContent = "Share (Copy)";
+  button_copy.onclick = shareViaCopy;
+
+  // Append the button to a specific HTML element or container
+  var container = document.getElementById("Copy_Button_Id");
+  container.appendChild(button_copy);
+}
+
+// Generate the text to send via whatsap
+function shareViaWhatsApp() {
+  const WhatsAppToday = `${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}`;
+  var message = "MonuGuess (" + WhatsAppToday + ")\n"  + '🏛️' + Squares_text + '\n\n' + 'https://monuguess.com';
+
+  var url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+function shareViaCopy() {
+  const WhatsAppToday = `${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}`;
+  var message = "MonuGuess (" + WhatsAppToday + ")\n"  + '🏛️' + Squares_text + '\n\n' + 'https://monuguess.com';
+
+  // Create a temporary textarea element
+  var textarea = document.createElement("textarea");
+  textarea.value = message;
+
+  // Append the textarea to the body
+  document.body.appendChild(textarea);
+
+  // Copy the text from the textarea
+  textarea.select();
+  document.execCommand("copy");
+
+  // Remove the temporary textarea
+  document.body.removeChild(textarea);
+
+  // Notify the user that the text has been copied
+  alert("Text copied to clipboard!");
+}
