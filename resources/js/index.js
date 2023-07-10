@@ -234,7 +234,7 @@ function Guess_Hide_Part_Showcase() {
 		Final_Showcase.style.display = "block";
 }
 
-
+var Squares_text; // Declare the shared variable
 // Añado al boton la funcion de leer (y logear para debugear) la opcion que ha querido el guesseador
 button.addEventListener('click', function(){
   
