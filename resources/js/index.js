@@ -312,6 +312,7 @@ button.addEventListener('click', function(){
         GuessRow1.outerHTML  = newHTML_Adapted_function;
 
         // Creating the squares
+        Squares_text = "🟩⬛⬛⬛⬛"
         Squares_const.innerHTML = `&#129001; &#11035; &#11035; &#11035; &#11035;`
 
         // Call the function to generate the button (for the whatsap)
@@ -334,6 +335,7 @@ button.addEventListener('click', function(){
         GuessRow2.outerHTML  = newHTML_Adapted_function;
 
         // Creating the squares
+        Squares_text = "🟥🟩⬛⬛⬛"
         Squares_const.innerHTML = `&#128997; &#129001; &#11035; &#11035; &#11035;`
 
         // Call the function to generate the button (for the whatsap)
@@ -356,6 +358,7 @@ button.addEventListener('click', function(){
         GuessRow3.outerHTML  = newHTML_Adapted_function;
 
         // Creating the squares
+        Squares_text = "🟥🟥🟩⬛⬛"
         Squares_const.innerHTML = `&#128997; &#128997; &#129001; &#11035; &#11035;`
 
         // Call the function to generate the button (for the whatsap)
@@ -378,6 +381,7 @@ button.addEventListener('click', function(){
         GuessRow4.outerHTML  = newHTML_Adapted_function;
 
         // Creating the squares
+        Squares_text = "🟥🟥🟥🟩⬛"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#129001; &#11035;`
 
         // Call the function to generate the button (for the whatsap)
@@ -400,6 +404,7 @@ button.addEventListener('click', function(){
         GuessRow5.outerHTML  = newHTML_Adapted_function;
 
         // Creating the squares
+        Squares_text = "🟥🟥🟥🟥🟩"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#129001;`
 
         // Call the function to generate the button (for the whatsap)
@@ -511,6 +516,7 @@ button.addEventListener('click', function(){
         Correct_Ans_Disp_Exclam_const.innerHTML = '';
 
         // Creating the squares
+        Squares_text = "🟥🟥🟥🟥🟥"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#128997;`
 
         // Call the function to generate the button (for the whatsap)
