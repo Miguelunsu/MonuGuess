@@ -317,8 +317,8 @@ button.addEventListener('click', function(){
 	console.log(Squares_text)
         Squares_const.innerHTML = `&#129001; &#11035; &#11035; &#11035; &#11035;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 	
       } else if (flag == 1){
         // Segunda box
@@ -340,8 +340,8 @@ button.addEventListener('click', function(){
         Squares_text = "🟥🟩⬛⬛⬛"
         Squares_const.innerHTML = `&#128997; &#129001; &#11035; &#11035; &#11035;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 	
       } else if (flag == 2){
         // Tercera box
@@ -363,8 +363,8 @@ button.addEventListener('click', function(){
         Squares_text = "🟥🟥🟩⬛⬛"
         Squares_const.innerHTML = `&#128997; &#128997; &#129001; &#11035; &#11035;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 	
       } else if (flag == 3){
         // Cuarta box
@@ -386,8 +386,8 @@ button.addEventListener('click', function(){
         Squares_text = "🟥🟥🟥🟩⬛"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#129001; &#11035;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 	
       } else if (flag == 4){
         // Quinta box
@@ -409,8 +409,8 @@ button.addEventListener('click', function(){
         Squares_text = "🟥🟥🟥🟥🟩"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#129001;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 	
       }
 
@@ -521,8 +521,8 @@ button.addEventListener('click', function(){
         Squares_text = "🟥🟥🟥🟥🟥"
         Squares_const.innerHTML = `&#128997; &#128997; &#128997; &#128997; &#128997;`
 
-        // Call the function to generate the button (for the whatsap)
-        generateButton();
+        // Allowing the user to see the whatasp and copy buttons
+        wha_and_copy_const.style.display = "block"
 
         // Removing the input and guess button:
         input_and_button_Element.remove();
@@ -530,11 +530,9 @@ button.addEventListener('click', function(){
         // Removing boxes:
         boxes_Element.remove();
 		
-
 	  // For the hiding and showing guesses part
 	  Guess_Hide_Part();
     Guess_Hide_Part_Showcase()
-
 
     // To hide the guess_boxes
     Hide_Guess_Boxes()
@@ -546,24 +544,12 @@ button.addEventListener('click', function(){
 
 });
 
-// Generate button for the button
-function generateButton() {
-  var button_wha = document.createElement("button");
-  button_wha.textContent = "Share (WhatsApp)";
-  button_wha.onclick = shareViaWhatsApp;
+// Whatsaup and copy buttons
+var button_wha = document.getElementById("Whatsap_Button_Id");
+button_wha.onclick = shareViaWhatsApp;
 
-  // Append the button to a specific HTML element or container
-  var container = document.getElementById("Whatsap_Button_Id");
-  container.appendChild(button_wha);
-
-  var button_copy = document.createElement("button");
-  button_copy.textContent = "Share (Copy)";
-  button_copy.onclick = shareViaCopy;
-
-  // Append the button to a specific HTML element or container
-  var container = document.getElementById("Copy_Button_Id");
-  container.appendChild(button_copy);
-}
+var button_copy = document.getElementById("Copy_Button_Id");
+button_copy.onclick = shareViaCopy;
 
 // Generate the text to send via whatsap
 function shareViaWhatsApp() {
