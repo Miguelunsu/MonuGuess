@@ -198,6 +198,9 @@ const boxes_Element = document.getElementById('boxes_guess');
 let Guess_Store_List = [
 ];
 
+// The elemnt which contains the "share via whatasp and copy" links
+const wha_and_copy_const = document.getElementById("wha_and_copy_id");
+
 const Show_Hide_Button = document.getElementById("Show_Hide_Guess_Button");
 const guessesContainer = document.getElementById("guessesContainer");
 
