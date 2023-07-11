@@ -336,6 +336,40 @@ p {
   line-height: 8px; /* set line-height to match the height */
 }
 
+.container .custom-button {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.container #Whatsap_Button_Id {
+  background-color: rgb(158, 216, 163);
+  color: black;
+  padding-left: 0.8em;
+}
+
+.container #Copy_Button_Id {
+  background-color: rgb(198, 188, 255);
+  color: black;
+  padding-left: 0.8em;
+}
+
+.container .custom-button img {
+  width: 4em;
+  height: 2.5em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 @media only screen and (max-width: 480px) {
   body {
     font-size: 10px;
