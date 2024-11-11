@@ -24,7 +24,7 @@ const landmark_list = [64, 33, 41, 57, 70, 140, 171, 82, 16, 173, 95, 67, 132, 6
 
 // Creating diccionary day-landmark
 const dates = [];
-const startDate = new Date(2024, 9, 4); // The month in the middle needs to be added 1 (0 is January)
+const startDate = new Date(2024, 10, 10); // The month in the middle needs to be added 1 (0 is January)
 console.log('Start day: startDate');
 console.log(startDate);
 const dictionary = {};
